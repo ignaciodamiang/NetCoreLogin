@@ -1,0 +1,40 @@
+﻿@page
+@using System.Web
+@using Microsoft.AspNetCore.Http.Extensions
+@model IndexModel
+
+<div class="container-fluid d-none d-lg-block bg-light m-0 border-bottom border-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb bg-light m-0">
+                        <li class="breadcrumb-item">Index</li>
+                        <li class="breadcrumb-item active">Login</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container d-flex flex-column">
+    <div class="d-flex flex-column flex-md-row justify-content-center flex-md-row-reverse mt-4 mb-4">
+
+        <form class="col-12 col-lg-4 col-md-6 bg-white shadow border rounded p-5" method="post" asp-page-handler="login" enctype="multipart/form-data">
+        <p class="h5">Ingresar a</p>
+        <p class="h3">Mi Portal de Estudiante</p>
+        <hr class="mt-2">
+            <label class="form-label" for="email-login">Email:</label>
+            <input class="form-control" id="email-login" type="text" asp-for="Email">
+            <label class="form-label mt-3" for="password-login">Password:</label>
+            <input class="form-control" id="password-login" type="password" asp-for="Password">
+            <button class="btn btn-primary mt-3" type="submit">Log In</button>
+            <div asp-validation-summary="All" class="text-danger mt-3"></div>
+        </form>
+
+        <div class="d-flex flex-column justify-content-end col-md-6 col-lg-8 text-white mi-admin rounded border">
+            <h1 class="display-5 p-5 m-0 align-items-end">Login</h1>
+        </div>
+    </div>
+</div>
