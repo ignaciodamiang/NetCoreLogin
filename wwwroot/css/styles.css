@@ -513,3 +513,12 @@ nav.datepicker--nav {
         display: none !important;
     }
 }
+
+/* apply image students.jpg to class mi-admin*/
+
+.mi-admin {
+    background-image: url(../images/students.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
