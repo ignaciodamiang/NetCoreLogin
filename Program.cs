@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using NetCoreLogin.Services;
+using NetCoreLogin.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,7 @@ builder.Services.AddRazorPages().AddRazorPagesOptions(o =>
 });
 
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<IApiService, ApiService>();
 
 builder.Services.AddSession(options =>
 {

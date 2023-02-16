@@ -26,9 +26,9 @@
         <p class="h3">Mi Portal de Estudiante</p>
         <hr class="mt-2">
             <label class="form-label" for="email-login">Email:</label>
-            <input class="form-control" id="email-login" type="text" asp-for="Email">
+            <input class="form-control" id="email-login" type="text" name="Email">
             <label class="form-label mt-3" for="password-login">Password:</label>
-            <input class="form-control" id="password-login" type="password" asp-for="Password">
+            <input class="form-control" id="password-login" type="password" name="Password">
             <button class="btn btn-primary mt-3" type="submit">Log In</button>
             <div asp-validation-summary="All" class="text-danger mt-3"></div>
         </form>
